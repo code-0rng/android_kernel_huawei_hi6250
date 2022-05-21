@@ -37,8 +37,6 @@ OBC_LOCAL_INC_DIR += \
     $(BALONG_TOPDIR)/ \
     $(BALONG_TOPDIR)/modem/platform/dsp/${CFG_PLATFORM_HISI_BALONG}/ \
     $(BALONG_TOPDIR)/modem/config/errlog/chrdirectrpt/inc \
-    $(BALONG_TOPDIR)/modem/config/product/$(OBB_PRODUCT_NAME)/config    \
-    $(BALONG_TOPDIR)/modem/ps/comm/comm/ccore/MEM/NODE/Inc 
 
 #***********************************************************#
 # source files

@@ -1,13 +1,13 @@
-# MD5: 3aac07b7777041d22686319d5d462d7c
+# MD5: 5dfffa91e4fe75fee06fa3fd6bd277fa
 CFG_BALONG_OBUILD_VERSION:=10
 CFG_PRODUCT_NAME                      :="hi6250"
 CFG_PRODUCT_CFG_CHIP_SOLUTION_NAME    :="Balong"
 CFG_BUILD_TYPE                        :=RELEASE
 CFG_PRODUCT_VERSION                   :=K300V300C00B000
-CFG_PRODUCT_VERSION_STR               :="Dallas V100R001C60B269SPC005"
-CFG_PRODUCT_FULL_VERSION_STR          :="Dallas V100R001C60B269SPC005"
+CFG_PRODUCT_VERSION_STR               :="Dallas V100R001C60B269SPC002"
+CFG_PRODUCT_FULL_VERSION_STR          :="Dallas V100R001C60B269SPC002"
 CFG_PRODUCT_FILE_VERSION_STR          :="2.1.6.8"
-CFG_PRODUCT_DLOAD_SOFTWARE_VER		:= "21C60B269S005C000"
+CFG_PRODUCT_DLOAD_SOFTWARE_VER		:= "21C60B269S002C000"
 CFG_PLATFORM :=hi6250
 CFG_PLATFORM_CHIP_TYPE := hi6250
 CFG_NV_VERSION :=nv_history
@@ -514,6 +514,7 @@ CFG_SC_CTRL_MOD_6250_SFT                        := 5
 CFG_SC_CTRL_MOD_6932_SFT                        := 6
 CFG_SC_CTRL_MOD_3660_SFT                        := 7
 CFG_SC_CTRL_MOD_KIRIN970_SFT                    := 8
+CFG_SC_CTRL_MOD_KIRIN660_SFT                    := 9
 CFG_SC_CTRL_MOD                                 := (SC_CTRL_MOD_6250_SFT)
 CFG_ZSP_DSP_CHIP_BB_TYPE		        :=10
 CFG_ZSP_DSP_PRODUCT_FORM		        :=4
@@ -551,20 +552,18 @@ else
 CFG_FEATURE_SC_NETWORK_UPDATE              := FEATURE_OFF
 endif
 ifeq ($(FEATURE_SIMLOCK_CUST),FEATURE_ON)
-CFG_FEATURE_SC_DATA_STRUCT_EXTERN             := FEATURE_OFF
-CFG_FEATURE_BOSTON_AFTER_FEATURE              := FEATURE_ON
+CFG_FEATURE_SC_DATA_STRUCT_EXTERN             := FEATURE_ON
 else
-CFG_FEATURE_BOSTON_AFTER_FEATURE              := FEATURE_OFF
 CFG_FEATURE_SC_DATA_STRUCT_EXTERN             := FEATURE_OFF
 endif
 CFG_BBP_MASTER_NONE                             := 0
-CFG_BBP_MASTER_VER1                             := 1
-CFG_BBP_MASTER_VER2                             := 2
-CFG_BBP_MASTER_VER3                             := 3
-CFG_BBP_MASTER_VER4                             := 4
-CFG_BBP_MASTER_VER5                             := 5
-CFG_BBP_MASTER_VER6                             := 6
-CFG_FEATURE_BBP_MASTER_VER                      := (BBP_MASTER_VER3)
+CFG_BBP_MASTER_V8R1                             := 1
+CFG_BBP_MASTER_V7R5                             := 2
+CFG_BBP_MASTER_V8R5                             := 3
+CFG_BBP_MASTER_K3V6                             := 4
+CFG_BBP_MASTER_KIRIN970                         := 5
+CFG_BBP_MASTER_KIRIN660                         := 6
+CFG_FEATURE_BBP_MASTER_VER                      := (BBP_MASTER_V8R5)
 CFG_FEATURE_VOICE_UP 					:= FEATURE_OFF
 CFG_FEATURE_GUC_BBP_TRIG                        := FEATURE_ON
 CFG_FEATURE_GUC_BBP_TRIG_NEWVERSION             := FEATURE_OFF
@@ -572,6 +571,7 @@ CFG_FEATURE_GUBBP_HANDSHAKE                     := FEATURE_ON
 CFG_FEATURE_POWER_TIMER                         := FEATURE_ON
 CFG_FEATURE_GUDRX_NEWVERSION                    := FEATURE_OFF
 CFG_FEATURE_RTC_TIMER_DBG                       := FEATURE_ON
+CFG_FEATURE_BOSTON_AFTER_FEATURE                := FEATURE_OFF
 CFG_FEATURE_LTE_R11                        := FEATURE_ON
 CFG_FEATURE_LTE_MBMS                       := FEATURE_OFF
 CFG_FEATURE_LPP                                 := FEATURE_ON

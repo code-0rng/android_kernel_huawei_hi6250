@@ -63,6 +63,7 @@ EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/comm/acore/om/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/gu/ccore/usimm/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/comm/ccore/xml/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/gu/comm/si/
+EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/gu/comm/sc/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/comm/comm/nvim/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/comm/comm/ppm/
 EXTRA_CFLAGS += -I$(MODEM_DIR)/oam/inc/gu/comm/cbtfun/
@@ -111,7 +112,7 @@ endif
 EXTRA_CFLAGS += -DPRODUCT_CFG_MULTIMODE_LTE -DHAL_DIAG_SDM_USE
 
 
-EXTRA_CFLAGS += -fsigned-char
+EXTRA_CFLAGS += -fsigned-char 
 gumsp-objs += $(OAMDIR)/../config/errlog/errlog_cfg.o
 gumsp-objs += $(OAMDIR)/gu/acore/om/ompcvoice.o
 gumsp-objs += $(OAMDIR)/gu/acore/om/pamappom.o
@@ -121,6 +122,7 @@ gumsp-objs += $(OAMDIR)/gu/acore/cbtppm/CbtPpm.o
 gumsp-objs += $(OAMDIR)/gu/acore/cbtscm/CBTSCMSoftDecode.o
 gumsp-objs += $(OAMDIR)/gu/acore/cbtfun/cbtappfunction.o
 gumsp-objs += $(OAMDIR)/gu/acore/cbtfun/cbtapprl.o
+gumsp-objs += $(OAMDIR)/gu/comm/sc/ScCommCtx.o
 gumsp-objs += $(OAMDIR)/gu/acore/osa/linux_sem.o
 gumsp-objs += $(OAMDIR)/gu/acore/osa/linux_task.o
 gumsp-objs += $(OAMDIR)/gu/acore/si/PcscProc.o
